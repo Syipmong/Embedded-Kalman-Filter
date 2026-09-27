@@ -1,0 +1,22 @@
+# CMake build output
+/build/
+/CMakeCache.txt
+/CMakeFiles/
+/cmake_install.cmake
+/install_manifest.txt
+/Makefile
+
+# Compiled artifacts
+*.o
+*.obj
+*.a
+*.lib
+*.exe
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.log
