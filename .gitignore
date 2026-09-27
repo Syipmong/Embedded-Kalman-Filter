@@ -16,6 +16,7 @@
 # IDE and editor files
 .vscode/
 .idea/
+__pycache__
 
 # Temporary files
 *.tmp
