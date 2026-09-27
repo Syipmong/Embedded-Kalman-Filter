@@ -9,3 +9,17 @@ void kalman_init(kalman_filter_t *kf, float process_noise, float measurement_noi
     kf -> p = initial_error;
     kf -> k = 0.0f;
 }
+
+float kalman_update(kalman_filter_t *kf, float measurement)
+{
+    /* Prediction Update */
+    kf -> p = kf -> p + kf -> q;
+
+    /*Measurement Update*/
+    kf -> k = kf -> p / (kf -> p + kf -> r);
+    kf -> x = kf -> x + kf -> k * (measurement - kf -> x);
+    kf -> p = (1.0f - kf -> k) * kf -> p;
+
+    return kf -> x;
+
+}
