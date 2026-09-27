@@ -20,3 +20,6 @@
 # Temporary files
 *.tmp
 *.log
+
+# Generated plots
+convergence_plot.png

@@ -32,3 +32,20 @@ cmake -B build -G "MinGW Makefiles"
 cmake --build build
 .\build\bench_kalman.exe
 ```
+
+## Plot Results
+
+Install the Python plotting dependency once:
+
+```powershell
+python -m pip install matplotlib
+```
+
+After building the benchmark, generate the convergence plot from its live output:
+
+```powershell
+python .\graph.py
+```
+
+This saves `convergence_plot.png` in the project directory. You can choose another
+output path with `python .\graph.py --output path\to\plot.png`.
