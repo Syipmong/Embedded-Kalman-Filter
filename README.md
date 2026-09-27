@@ -24,3 +24,11 @@ cmake -B build
 cmake --build build
 ./build/bench_kalman
 ```
+
+On Windows with the MSYS2 MinGW toolchain, use PowerShell:
+
+```powershell
+cmake -B build -G "MinGW Makefiles"
+cmake --build build
+.\build\bench_kalman.exe
+```
